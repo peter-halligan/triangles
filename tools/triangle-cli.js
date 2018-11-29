@@ -3,7 +3,7 @@
 
 const chalk = require('chalk');
 const commander = require('commander');
-const TriangleType = require('../TriangleType');
+const TriangleType = require('../lib/TriangleType');
 
 commander
   .version('0.0.1')
@@ -11,7 +11,7 @@ commander
   .arguments('<a> <b> <c>')
   .parse(process.argv);
 
-
+/* eslint-disable no-console */
 const triangle = TriangleType(...commander.args);
 triangle.then(
   data => console.log(chalk.green(data)),

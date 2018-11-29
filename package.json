@@ -4,7 +4,7 @@
   "description": "application to return type of triangle based on user input",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
   "author": "peter halligan",
   "license": "ISC",
