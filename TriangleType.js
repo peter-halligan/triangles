@@ -4,6 +4,7 @@ const TriangleType = (sideA, sideB, sideC) => new Promise((resolve, reject) => {
   const b = parseFloat(sideB);
   const c = parseFloat(sideC);
   if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c) || a === 0 || b === 0 || c === 0) return reject(new Error('invalid_arguments'));
+
   if (a === b && b === c) return resolve('equilateral');
   if (a !== b && b !== c && a !== c) return resolve('scalene');
   // could leave this as an else
