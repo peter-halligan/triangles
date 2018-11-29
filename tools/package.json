@@ -1,0 +1,15 @@
+{
+  "name": "triangle-cli",
+  "version": "0.0.1",
+  "description": "cli for getting the type of triangle based on the length of sides",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "peter halligan",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0"
+  }
+}

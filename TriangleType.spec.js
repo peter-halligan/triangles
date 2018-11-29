@@ -35,47 +35,52 @@ test('should identify an isosceles triangle if 2 sides, b & c are equal', async 
 
 test('should return an error if not provided with 3 args', async () => {
   expect.assertions(1);
+  const err = new Error('not_enough_arguments');
   try {
     await TriangleType(3, 1);
   } catch (e) {
-    expect(e).toMatch('not_enough_arguments');
+    expect(e).toEqual(err);
   }
 });
 
 test('should return an error if an arg is undefined', async () => {
   expect.assertions(1);
+  const err = new Error('not_enough_arguments');
   try {
     await TriangleType(3, 1, undefined);
   } catch (e) {
-    expect(e).toMatch('not_enough_arguments');
+    expect(e).toEqual(err);
   }
 });
 
 test('should return an error if an arg is null', async () => {
   expect.assertions(1);
+  const err = new Error('not_enough_arguments');
   try {
     await TriangleType(null, 1, 1);
   } catch (e) {
-    expect(e).toMatch('not_enough_arguments');
+    expect(e).toEqual(err);
   }
 });
 
 test('should return an error if a side is 0', async () => {
   expect.assertions(1);
+  const err = new Error('not_enough_arguments');
   try {
     await TriangleType(0, 1, 1);
   } catch (e) {
-    expect(e).toMatch('not_enough_arguments');
+    expect(e).toEqual(err);
   }
 });
 
 test('should return an error not a number is passed in', async () => {
   expect.assertions(1);
+  const err = new Error('not_enough_arguments');
   try {
     const response = await TriangleType(NaN, 1, 1);
     expect(response).toBeNull();
   } catch (e) {
-    expect(e).toMatch('not_enough_arguments');
+    expect(e).toEqual(err);
   }
 });
 
@@ -93,10 +98,11 @@ test('should return equilateral if a 2 strings and a numbers of equal length are
 
 test('should return an error if string with a value of zero is passed ', async () => {
   expect.assertions(1);
+  const err = new Error('invalid_arguments');
   try {
     const response = await TriangleType('0', 1, 1);
     expect(response).toBeNull();
   } catch (e) {
-    expect(e).toMatch('invalid_arguments');
+    expect(e).toEqual(err);
   }
 });
