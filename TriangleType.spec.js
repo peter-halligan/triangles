@@ -1,87 +1,102 @@
-const TriangleType = require("./TriangleType");
+const TriangleType = require('./TriangleType');
 
-test("should be defined", () => {
+test('should be defined', () => {
   expect(TriangleType).toBeDefined();
 });
 
-test("should identify an equilateral triangle if all sides are even", async () => {
+test('should identify an equilateral triangle if all sides are even', async () => {
   expect.assertions(1);
   const response = await TriangleType(1, 1, 1);
-  expect(response).toBe("equilateral");
-
+  expect(response).toBe('equilateral');
 });
 
-test("should identify an scalene triangle if all sides are not equal", async () => {
+test('should identify an scalene triangle if all sides are not equal', async () => {
   expect.assertions(1);
   const response = await TriangleType(1, 2, 3);
-  expect(response).toBe("scalene");
+  expect(response).toBe('scalene');
 });
 
-test("should identify an isosceles triangle if 2 sides are equal", async () => {
+test('should identify an isosceles triangle if 2 sides, a & b are equal', async () => {
   expect.assertions(1);
   const response = await TriangleType(1, 1, 3);
-  expect(response).toBe("isosceles");
+  expect(response).toBe('isosceles');
 });
 
-test("should identify an isosceles triangle if 2 sides are equal", async () => {
+test('should identify an isosceles triangle if 2 sides, a & c are equal', async () => {
   expect.assertions(1);
   const response = await TriangleType(1, 3, 1);
-  expect(response).toBe("isosceles");
-
+  expect(response).toBe('isosceles');
 });
 
-test("should identify an isosceles triangle if 2 sides are equal", async () => {
+test('should identify an isosceles triangle if 2 sides, b & c are equal', async () => {
   const response = await TriangleType(3, 1, 1);
-  expect(response).toBe("isosceles");
+  expect(response).toBe('isosceles');
 });
 
-test("should return an error if not provided with 3 args", async () => {
+test('should return an error if not provided with 3 args', async () => {
   expect.assertions(1);
   try {
     await TriangleType(3, 1);
   } catch (e) {
-    expect(e).toMatch("not_enough_arguments");
+    expect(e).toMatch('not_enough_arguments');
   }
-
 });
 
-test("should return an error if an arg is undefined", async () => {
+test('should return an error if an arg is undefined', async () => {
   expect.assertions(1);
   try {
     await TriangleType(3, 1, undefined);
   } catch (e) {
-    expect(e).toMatch("not_enough_arguments");
+    expect(e).toMatch('not_enough_arguments');
   }
-
 });
 
-test("should return an error if an arg is null", async () => {
+test('should return an error if an arg is null', async () => {
   expect.assertions(1);
   try {
     await TriangleType(null, 1, 1);
   } catch (e) {
-    expect(e).toMatch("not_enough_arguments");
+    expect(e).toMatch('not_enough_arguments');
   }
-
 });
 
-test("should return an error if a side is 0", async () => {
+test('should return an error if a side is 0', async () => {
   expect.assertions(1);
   try {
     await TriangleType(0, 1, 1);
   } catch (e) {
-    expect(e).toMatch("not_enough_arguments");
+    expect(e).toMatch('not_enough_arguments');
   }
-
 });
 
-test("should return an error not a number is passed in ", async () => {
+test('should return an error not a number is passed in', async () => {
   expect.assertions(1);
   try {
-    const response = await TriangleType("0", 1, 1);
-    console.log("\n\n\n\n response", response);
+    const response = await TriangleType(NaN, 1, 1);
+    expect(response).toBeNull();
   } catch (e) {
-    expect(e).toMatch("arg_is_not_a_number");
+    expect(e).toMatch('not_enough_arguments');
   }
+});
 
+test('should return equilateral if a string and 2 numbers of equal length are supplied ', async () => {
+  expect.assertions(1);
+  const response = await TriangleType('1', 1, 1);
+  expect(response).toBe('equilateral');
+});
+
+test('should return equilateral if a 2 strings and a numbers of equal length are supplied ', async () => {
+  expect.assertions(1);
+  const response = await TriangleType('1', '1', 1);
+  expect(response).toBe('equilateral');
+});
+
+test('should return an error if string with a value of zero is passed ', async () => {
+  expect.assertions(1);
+  try {
+    const response = await TriangleType('0', 1, 1);
+    expect(response).toBeNull();
+  } catch (e) {
+    expect(e).toMatch('invalid_arguments');
+  }
 });
