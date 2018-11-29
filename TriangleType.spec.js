@@ -74,3 +74,14 @@ test("should return an error if a side is 0", async () => {
   }
 
 });
+
+test("should return an error not a number is passed in ", async () => {
+  expect.assertions(1);
+  try {
+    const response = await TriangleType("0", 1, 1);
+    console.log("\n\n\n\n response", response);
+  } catch (e) {
+    expect(e).toMatch("arg_is_not_a_number");
+  }
+
+});
