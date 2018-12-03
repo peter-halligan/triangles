@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { InputLengths } from "./components/InputLengths.compnent";
+import { InputLengths } from "./components/InputLengths.component";
 import { DisplayTriangleType } from "./components/DisplayTriangleType.component";
 import { Header} from "./components/Header.component";
 import {Instructions} from "./components/Instructions.component";
@@ -23,7 +23,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <Instructions />
+        <div className={"form-wrapper"}>
         <InputLengths setTriangleType={this.setTriangleType}/>
+        </div>
         {this.state.type && <DisplayTriangleType type={this.state.type}/>}
       </div>
     );

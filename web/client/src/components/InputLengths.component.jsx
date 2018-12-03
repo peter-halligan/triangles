@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../App.css';
 
 class InputLengths extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ class InputLengths extends Component {
     this.setState({ [propertyToUpdate]: ''});
   }
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
     const { a, b ,c } = this.state;
     event.preventDefault();
     fetch('/triangle', {

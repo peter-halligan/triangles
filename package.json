@@ -24,12 +24,19 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "linters": {
+      "api/**/*.js": [
+        "eslint --fix",
+        "git add"
+      ],
+      "lib/*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"
+
   }
 }

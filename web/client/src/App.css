@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
 }
 
-.Header {
-  background-color: #282c34;
+.header {
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -13,6 +15,42 @@
   color: white;
 }
 
+.form-wrapper {
+  background-color: #282c34;
+  color: white;
+  padding: 3px;
+  margin: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+label {
+  padding: 5px;
+  margin: 3px;
+}
+
+input[type="text"] {
+  width: 50px;
+  border: none;
+  background-color: white;
+  padding: 5px;
+  margin: 3px;
+}
+input[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 .App-link {
   color: #61dafb;
 }
