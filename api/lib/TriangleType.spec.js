@@ -1,4 +1,4 @@
-const TriangleType = require('../lib/TriangleType');
+const TriangleType = require('./TriangleType');
 
 describe('Triangle Type checker ', () => {
   test('should be defined', () => {

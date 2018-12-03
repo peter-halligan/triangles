@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const TriangleType = require('../../lib/TriangleType');
+const TriangleType = require('../lib/TriangleType');
 
 /* check type of triangle. */
 router.post('/', async (req, res, next) => {

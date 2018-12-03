@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` matches the snapshot  1`] = `
+<div>
+  <div>
+    A Simple application to take in triangle side lengths and return the type of triangle.
+  </div>
+  <div>
+    
+  </div>
+  <div>
+    You can also download a cli which contains this functionality or just use the api try using post man to hit post /triangle {a:1, b:2 c: 3} 
+  </div>
+</div>
+`;

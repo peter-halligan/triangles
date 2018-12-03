@@ -1,5 +1,5 @@
 node_modules/
 .idea/
 api/output/
-output/
 api/node_modules/
+coverage/
