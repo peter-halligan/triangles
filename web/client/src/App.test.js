@@ -17,7 +17,7 @@ test(' matches the snapshot ',  () =>{
 
   instance.setTriangleType({type: "test"})
 
-  expect(instance.state).toEqual({type: 'test'});
+  expect(instance.state).toEqual({error: null, type: 'test'});
   expect(tree.toJSON()).toMatchSnapshot();
 
 

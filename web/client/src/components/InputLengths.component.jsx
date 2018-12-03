@@ -33,7 +33,10 @@ class InputLengths extends Component {
       body: JSON.stringify({a:a, b:b, c:c}), // body data type must match "Content-Type" header
     })
       .then(response => response.json())
-      .then(type => this.props.setTriangleType(type)); // parses response to JSON
+      .then(type => this.props.setTriangleType(type))
+      .catch(error => {
+        this.props.setError(error)
+      }); // parses response to JSON
   }
 
   render() {

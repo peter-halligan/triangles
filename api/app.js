@@ -19,9 +19,9 @@ app.use('/triangle', triangleRouter);
 // custom error handler
 app.use((err, req, res, next) => {
   if (err.message === 'not_enough_arguments') {
-    return res.status(400).send('Not Enough Arguments');
+    return res.status(400).send({ error: 'Not Enough Arguments' });
   } if (err.message === 'invalid_arguments') {
-    return res.status(400).send('Invalid Arguments');
+    return res.status(400).send({ error: 'Invalid Arguments' });
   }
   return next(err);
 });

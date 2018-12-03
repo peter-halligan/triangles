@@ -4,7 +4,9 @@
   color: white;
   min-height: 100vh;
 }
-
+.error {
+  color: red;
+}
 .header {
   min-height: 20vh;
   display: flex;
