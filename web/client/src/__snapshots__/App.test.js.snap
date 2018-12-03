@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` matches the snapshot  1`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      Triangle Type Checker
+    </h1>
+  </div>
+  <div>
+    <div>
+      A Simple application to take in triangle side lengths and return the type of triangle.
+    </div>
+    <div>
+      
+    </div>
+    <div>
+      You can also download a cli which contains this functionality or just use the api try using post man to hit post /triangle {a:1, b:2 c: 3} 
+    </div>
+  </div>
+  <div
+    className="form-wrapper"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label>
+        Side A:
+        <input
+          name="a"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Side B:
+        <input
+          name="b"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Side C:
+        <input
+          name="c"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <input
+        type="submit"
+        value="Check Triangle"
+      />
+    </form>
+  </div>
+  
+</div>
+`;
+
+exports[` matches the snapshot  2`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      Triangle Type Checker
+    </h1>
+  </div>
+  <div>
+    <div>
+      A Simple application to take in triangle side lengths and return the type of triangle.
+    </div>
+    <div>
+      
+    </div>
+    <div>
+      You can also download a cli which contains this functionality or just use the api try using post man to hit post /triangle {a:1, b:2 c: 3} 
+    </div>
+  </div>
+  <div
+    className="form-wrapper"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label>
+        Side A:
+        <input
+          name="a"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Side B:
+        <input
+          name="b"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Side C:
+        <input
+          name="c"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[0-9]*\\\\.{0,1}[0-9]"
+          type="text"
+          value=""
+        />
+      </label>
+      <input
+        type="submit"
+        value="Check Triangle"
+      />
+    </form>
+  </div>
+  <p>
+    test
+  </p>
+</div>
+`;
