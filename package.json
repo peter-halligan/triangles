@@ -4,6 +4,7 @@
   "description": "application to return type of triangle based on user input",
   "main": "index.js",
   "scripts": {
+    "postinstall": "(cd tools/ && npm install); (cd api/ && npm install); (cd web/client && npm install);",
     "test": "jest --coverage --coverageDirectory=coverage/api/jest && cd web/client/ && jest --coverage --coverageDirectory=../../coverage/web/jest",
     "client": "cd web/client && npm run start",
     "server": "cd api && npm run start",

@@ -107,4 +107,24 @@ describe('Triangle Type checker ', () => {
       expect(e).toEqual(err);
     }
   });
+
+  test('should return an answer if afloat is passed ', async () => {
+    expect.assertions(1);
+    try {
+      const response = await TriangleType(1.5, 1.0, 1);
+      expect(response).toEqual('isosceles');
+    } catch (e) {
+      expect(e).toBeNull();
+    }
+  });
+
+  test('should return an answer if afloat less than 1 is passed ', async () => {
+    expect.assertions(1);
+    try {
+      const response = await TriangleType(0.12, 1.0, 1);
+      expect(response).toEqual('isosceles');
+    } catch (e) {
+      expect(e).toBeNull();
+    }
+  });
 });

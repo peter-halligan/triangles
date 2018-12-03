@@ -133,18 +133,17 @@
     "presets": [
       "react-app"
     ]
-  }
-  ,
+  },
   "lint-staged": {
-  "linters": {
-    "src/components/*.{js, jsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "src/*.{js, jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
+    "linters": {
+      "src/components/*.{js, jsx}": [
+        "eslint --fix",
+        "git add"
+      ],
+      "src/*.{js, jsx}": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
   }
-}
 }
