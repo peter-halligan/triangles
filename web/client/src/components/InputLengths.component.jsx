@@ -16,7 +16,6 @@ class InputLengths extends Component {
     this.setState({ [propertyToUpdate]: event.target.value});
   }
   handleOnFocus(event){
-    console.log("here")
     const propertyToUpdate = event.target.name;
     this.setState({ [propertyToUpdate]: ''});
   }

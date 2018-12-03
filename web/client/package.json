@@ -56,7 +56,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "test": "jest --coverage --coverageDirectory=coverage/jest",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -77,9 +77,12 @@
     "@storybook/addons": "^4.0.9",
     "@storybook/react": "^4.0.9",
     "babel-loader": "^8.0.4",
+    "jest-fetch-mock": "^2.0.1",
+    "lint-staged": "^8.1.0",
     "react-test-renderer": "^16.6.3"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts",
@@ -109,6 +112,10 @@
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
     },
+    "coveragePathIgnorePatterns": [
+      "src/stories/index.js",
+      "src/index.js"
+    ],
     "moduleFileExtensions": [
       "web.js",
       "js",
@@ -127,4 +134,17 @@
       "react-app"
     ]
   }
+  ,
+  "lint-staged": {
+  "linters": {
+    "src/components/*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
 }

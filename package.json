@@ -4,7 +4,7 @@
   "description": "application to return type of triangle based on user input",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
+    "test": "jest --coverage --coverageDirectory=coverage/jest"
   },
   "author": "peter halligan",
   "license": "ISC",
@@ -19,8 +19,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
+      "pre-commit": "lint-staged && cd web/client/ && lint-staged",
+      "pre-push": "npm run test && cd web/client/ && npm run test"
     }
   },
   "lint-staged": {
@@ -34,6 +34,9 @@
         "git add"
       ]
     }
+  },
+  "jest":{
+    "testPathIgnorePatterns": ["/node_modules/", "/web"]
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"

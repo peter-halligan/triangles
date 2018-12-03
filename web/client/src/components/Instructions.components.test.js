@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Instructions } from './Instructions.component';
 import renderer from 'react-test-renderer';
-import { Header } from './Header.component';
 
 test('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Header />, div);
+  ReactDOM.render(<Instructions />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
 test(' matches the snapshot ',  () =>{
   const tree = renderer
-    .create(<Header />)
+    .create(<Instructions />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
