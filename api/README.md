@@ -12,6 +12,8 @@ body: { a: \<len>, b: \<len>, c: \<len>}
 
 Launches the test runner and will output the coverage.<br>
 
+docker run -d -p \<local-port>:3002 phalligan/triangle-api
+
 
 
 
