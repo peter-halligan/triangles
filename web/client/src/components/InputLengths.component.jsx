@@ -36,7 +36,7 @@ class InputLengths extends Component {
       .then(type => this.props.setTriangleType(type))
       .catch(error => {
         this.props.setError(error)
-      }); // parses response to JSON
+      });
   }
 
   render() {

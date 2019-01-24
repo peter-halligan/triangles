@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triangle
+spec:
+  selector:
+    matchLabels:
+      app: triangle
+      tier: backend
+  replicas: 7
+  template:
+    metadata:
+      labels:
+        app: triangle
+        tier: backend
+    spec:
+      containers:
+        - name: triangle-api
+          image: "docker.io/phalligan/triangle-api:latest"
+          ports:
+            - name: http
+              containerPort: 3002
