@@ -5,8 +5,8 @@ metadata:
 spec:
   ports:
   - port: 3002
-    targetPort: http
+    targetPort: 3002
   selector:
     app: triangle
     tier: backend
-  type: LoadBalancer
+  type: ClusterIP

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triangle-web
+spec:
+  selector:
+    matchLabels:
+      app: triangle-web
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: triangle-web
+        tier: frontend
+    spec:
+      containers:
+        - name: triangle-web
+          image: "docker.io/phalligan/triangle-web:latest"
+          ports:
+            - name: http
+              containerPort: 5000

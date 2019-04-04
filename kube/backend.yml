@@ -5,13 +5,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: triangle
+      app: triangle-backend
       tier: backend
-  replicas: 7
+  replicas: 1
   template:
     metadata:
       labels:
-        app: triangle
+        app: triangle-backend
         tier: backend
     spec:
       containers:
