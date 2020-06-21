@@ -1,4 +1,8 @@
-This project contains an api, a react front end and a cli. each can be run independently.
+# Triangle Type Identifier
+
+javascript web app a user can input lengths of the sides and return the triangle type.
+
+This project contains an api, a react frontend and a cli. Each can be run independently.
 The project has been set up to run all unit tests before a push and will run linters prior to a commit.
 
 Jest has been used as a test runner and storybook was used to develop the frontend components.
